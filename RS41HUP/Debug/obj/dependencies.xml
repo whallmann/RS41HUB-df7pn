@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\cmsis_boot /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\stm_lib /I..\..\..\..\..\..\Dropbox\Freifunk /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\cmsis /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\stm_lib\inc /I..\..\..\..\..\..\Dropbox\Freifunk\Github">
+   <includePath signature="/I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUB-df7pn\stm_lib\inc /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUB-df7pn\cmsis_boot /I..\..\..\..\..\..\Dropbox\Freifunk /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUB-df7pn\stm_lib /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUB-df7pn\cmsis /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUB-df7pn /I..\..\..\..\..\..\Dropbox\Freifunk\Github">
       <source file="..\..\..\cmsis\core_cm3.h" lastModified="1610637c248">
          <include file="..\..\..\cmsis\core_cmInstr.h"/>
          <include file="..\..\..\cmsis\core_cmFunc.h"/>
@@ -39,7 +39,7 @@
       <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="1610637be60">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\init.c" lastModified="1632afc8548">
+      <source file="..\..\..\init.c" lastModified="1632afc83f0">
          <include file="..\..\..\stm_lib\inc\stm32f10x_flash.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
@@ -86,6 +86,8 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_flash.h" lastModified="1610637be60">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
+      <source file="..\..\..\QAPRSCommon.h" lastModified="1610637ca18">
+      </source>
       <source file="..\..\..\stm_lib\inc\misc.h" lastModified="1610637be60">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -101,7 +103,7 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\delay.h"/>
       </source>
-      <source file="..\..\..\main.c" lastModified="16336e30019">
+      <source file="..\..\..\main.c" lastModified="1633ed72706">
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_spi.h"/>
@@ -155,6 +157,12 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
+      <source file="..\..\..\aprs.cpp" lastModified="1633a058b80">
+         <include file="..\..\..\aprs.h"/>
+         <include file="..\..\..\QAPRSBase.h"/>
+         <include file="..\..\..\ublox.h"/>
+         <include file="..\..\..\config.h"/>
+      </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="1610637be60">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -163,13 +171,132 @@
       </source>
       <source file="..\..\..\ublox.h" lastModified="1610637c248">
       </source>
-      <source file="..\..\..\config.h" lastModified="1633a02f45c">
+      <source file="..\..\..\config.h" lastModified="1633ed2dfc2">
       </source>
       <source file="..\..\..\ublox.c" lastModified="1610637c248">
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\ublox.h"/>
          <include file="..\..\..\delay.h"/>
          <include file="..\..\..\init.h"/>
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\cmsis_boot /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\stm_lib /I..\..\..\..\..\..\Dropbox\Freifunk /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\cmsis /I..\..\..\..\..\..\Dropbox\Freifunk\Github\RS41HUP-master\stm_lib\inc /I..\..\..\..\..\..\Dropbox\Freifunk\Github">
+      <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_spi.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_pwr.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md_vl.c" lastModified="1610637be60">
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\radio.c" lastModified="1610637be60">
+         <include file="..\..\..\radio.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="1610637be60">
+      </source>
+      <source file="..\..\..\init.h" lastModified="1610637be60">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\init.c" lastModified="1632afc8548">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_flash.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_spi.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+         <include file="..\..\..\init.h"/>
+         <include file="..\..\..\radio.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="1610637be60">
+      </source>
+      <source file="..\..\..\stm_lib\src\misc.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\QAPRSBase.h" lastModified="1610637be60">
+         <include file="..\..\..\QAPRSCommon.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_usart.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_spi.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_flash.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\delay.h" lastModified="1610637be60">
+      </source>
+      <source file="..\..\..\delay.c" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\delay.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_flash.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_flash.h"/>
+      </source>
+      <source file="..\..\..\QAPRSBase.cpp" lastModified="1610637be60">
+         <include file="..\..\..\QAPRSBase.h"/>
+         <include file="..\..\..\delay.h"/>
+         <include file="..\..\..\radio.h"/>
+         <include file="..\..\..\init.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_pwr.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_pwr.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\f_rtty.c" lastModified="1610637be60">
+         <include file="..\..\..\f_rtty.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="1610637be60">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="1610637be60">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
    </includePath>
 </dependencies>

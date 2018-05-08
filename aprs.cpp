@@ -71,7 +71,7 @@ void aprs_send_position(GPSEntry gpsData, int8_t temperature, uint16_t voltage) 
 
   sprintf(packet_buffer,
 // org         ("!%02d%02d.%02u%c/%03d%02u.%02u%cO/A=%06ld/P%dS%dT%dV%d%s"),
-          ("!%02d%02d.%02u%c/%03d%02u.%02u%cO/A=%06ld/#%d, Sats:%d, TempCPU:%d, Volt:%d.%02d, %s"),
+          ("!%02d%02d.%02u%c/%03d%02u.%02u%cO/A=%06ld/#%d, SAT:%d, tCPU:%d, Bat:%d.%02d V, %s"),
           abs(la_degrees), la_minutes, la_h_minutes,
           la_degrees > 0 ? 'N' : 'S',
           abs(lo_degrees), lo_minutes, lo_h_minutes,

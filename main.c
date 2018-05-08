@@ -176,8 +176,14 @@ int main(void) {
   while (1) {
     if (tx_on == 0 && tx_enable) {
       if (rtty_before_aprs_left){
-        // send_rtty_packet();
-        rtty_before_aprs_left --;
+    	if (!RTTY_DISABLED) {
+          send_rtty_packet();
+          rtty_before_aprs_left --;
+    	}
+    	else {
+    	  rtty_before_aprs_left = 0;
+    	}
+
       } else {
         rtty_before_aprs_left = RTTY_TO_APRS_RATIO;
         radio_enable_tx();
@@ -189,7 +195,9 @@ int main(void) {
         aprs_send_position(gpsData, temperature, voltage);
         USART_Cmd(USART1, ENABLE);
         radio_disable_tx();
-        _delay_ms(TX_DELAY);
+        if (RTTY_DISABLED) {
+         _delay_ms(TX_DELAY);
+        }
       }
 
     } else {

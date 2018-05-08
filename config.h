@@ -55,6 +55,9 @@
 //************rtty stop bits******************* si4032
 #define RTTY_USE_2_STOP_BITS   1
 
+//********* disable rtty (only aprs) *****************
+#define RTTY_DISABLED 1
+
 //********* power definition**************************
 #define TX_POWER 6 // PWR 0...7 0- MIN ... 7 - MAX
 // 0 --> -1dBm
