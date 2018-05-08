@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=RS41HUP.map -O3 --gc-sections --specs=nano.specs -lstdc++ -LD:\Entwicklung\CooCox\CoIDE\configuration\ProgramData\RS41HUP -TD:\Entwicklung\CooCox\CoIDE\configuration\ProgramData\RS41HUP/arm-gcc-link.ld -g">
+      <target file="RS41HUP.elf" lastModified="1633a058ed2">
+         <source file="..\obj\delay.o" lastModified="1632b5c46c7"/>
+         <source file="..\obj\stm32f10x_tim.o" lastModified="1632b5c48ab"/>
+         <source file="..\obj\startup_stm32f10x_md_vl.o" lastModified="1632b5c48f9"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="1632b5c4978"/>
+         <source file="..\obj\stm32f10x_pwr.o" lastModified="1632b5c49f4"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="1632b5c4ad0"/>
+         <source file="..\obj\main.o" lastModified="1633a058951"/>
+         <source file="..\obj\ublox.o" lastModified="1632b5c4e45"/>
+         <source file="..\obj\init.o" lastModified="1633a0589f5"/>
+         <source file="..\obj\aprs.o" lastModified="1633a058aa1"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="1632b5c5029"/>
+         <source file="..\obj\radio.o" lastModified="1633a058b1e"/>
+         <source file="..\obj\stm32f10x_adc.o" lastModified="1632b5c5177"/>
+         <source file="..\obj\stm32f10x_usart.o" lastModified="1632b5c5242"/>
+         <source file="..\obj\f_rtty.o" lastModified="1633a058b6c"/>
+         <source file="..\obj\syscalls.o" lastModified="1632b5c531d"/>
+         <source file="..\obj\stm32f10x_flash.o" lastModified="1632b5c5474"/>
+         <source file="..\obj\stm32f10x_dma.o" lastModified="1632b5c54f9"/>
+         <source file="..\obj\misc.o" lastModified="1632b5c5559"/>
+         <source file="..\obj\stm32f10x_spi.o" lastModified="1632b5c561c"/>
+         <source file="..\obj\QAPRSBase.o" lastModified="1633a058cb4"/>
+      </target>
+   </processor>
+</history>
